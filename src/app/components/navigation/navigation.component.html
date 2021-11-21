@@ -18,10 +18,11 @@
        </div>
 
 
-       
+      <div>       
          <svg
             xmlns="http://www.w3.org/2000/svg"
-            id="menu-button"
+            id="menu-button" 
+            (click)="onToggleMenu()"
             class="h-6 w-6 cursor-pointer md:hidden block"
             fill="none"
             viewBox="0 0 24 24"
@@ -34,8 +35,9 @@
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
+        </div>
        
-       <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+       <div class="{{isShow}} w-full md:flex md:items-center md:w-auto" id="menu">
           <ul
             class="
               pt-4
@@ -46,7 +48,7 @@
           >
             <li>
               <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
-                >Features</a
+                >Features</a  
               >
             </li>
             <li>

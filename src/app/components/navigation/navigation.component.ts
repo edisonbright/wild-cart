@@ -9,7 +9,18 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
+  isShow = "hidden"
+
   ngOnInit(): void {
+  }
+
+  onToggleMenu(){
+    console.log(this.isShow)
+    if(this.isShow === "hidden") {
+      this.isShow = ""
+    } else {
+      this.isShow = "hidden"
+    }
   }
 
 }
